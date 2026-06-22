@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #09090E;
+    color: #EEEEF5;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbars matching the dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090E;
+}
+::-webkit-scrollbar-thumb {
+  background: #22222E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #44445A;
+}
+
+/* Focus ring defaults */
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#09090E];
+}
